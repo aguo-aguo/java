@@ -4,18 +4,26 @@ import net.sf.cglib.proxy.Callback;
 import net.sf.cglib.proxy.CallbackFilter;
 import net.sf.cglib.proxy.Enhancer;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.net.Socket;
+import java.nio.channels.DatagramChannel;
+import java.nio.channels.Selector;
+import java.nio.channels.SocketChannel;
+import java.util.concurrent.*;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Created by aguo on 2018/3/3.
  */
 public class ProxyTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 //        testJdkProxy();
 
-        testCglibProxy();
+//        testCglibProxy();
 
     }
 
